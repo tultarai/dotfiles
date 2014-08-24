@@ -80,6 +80,12 @@ setopt auto_menu
 # 高機能なワイルドカード展開を使用する
 setopt extended_glob
 
+# =commandを`which command`と同じ処理
+setopt equals
+
+# 補完候補にファイルの種類も表示
+setopt list_types
+
 ########################################
 # キーバインド
 
@@ -105,4 +111,5 @@ fi
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
+alias h='history'
 
