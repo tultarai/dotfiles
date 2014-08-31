@@ -31,13 +31,11 @@ autoload -Uz compinit
 compinit
 
 ########################################
-source ~/.zsh/git-prompt
-
-########################################
 # プロンプト
 # PROMPT="%{${fg[red]}%}[%n@%m]%{${reset_color}%} %~%# "
 PROMPT="%{${fg[red]}%}[%n %~]%{${reset_color}%} %# "
 # RPROMPT="[%{$fg_no_bold[yellow]%}%?%{$reset_color%}]"
+source ~/.zsh/git-prompt
 precmd () {
   RPROMPT='$(__git_ps1 "[%s]")'
 }
