@@ -21,6 +21,7 @@ SAVEHIST=100000
 # PROMPT="%~ %# "
 # 2行表示
 PROMPT="%{${fg[red]}%}[%n@%m]%{${reset_color}%} %~%# "
+RPROMPT="[%{$fg_no_bold[yellow]%}%?%{$reset_color%}]"
 
 # 単語の区切り文字を指定する
 autoload -Uz select-word-style
