@@ -32,15 +32,17 @@ compinit
 
 ########################################
 # プロンプト
-# PROMPT="%{${fg[red]}%}[%n@%m]%{${reset_color}%} %~%# "
 PROMPT="%{${fg[red]}%}[%n %~]%{${reset_color}%} %# "
-# RPROMPT="[%{$fg_no_bold[yellow]%}%?%{$reset_color%}]"
-source ~/.zsh/git-prompt
+
+autoload -Uz vcs_info
+zstyle ':vcs_info:*' formats '[%b]'
+zstyle ':vcs_info:*' actionformats '[%b|%a]'
 precmd () {
-  RPROMPT='$(__git_ps1 "[%s]")'
+  psvar=()
+  LANG=en_US.UTF-8 vcs_info
+  [[ -n "$vcs_info_msg_0_" ]] && psvar[1]="$vcs_info_msg_0_"
 }
-GIT_PS1_SHOWDIRTYSTATE=1
-# GIT_PS1_SHOWCOLORHINTS=1
+RPROMPT="%1(v|%F{green}%1v%f|%F{blue}[$?]%f)"
 
 ########################################
 # オプション
