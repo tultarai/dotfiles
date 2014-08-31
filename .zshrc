@@ -122,3 +122,8 @@ alias la='ls -A'
 alias l='ls -CF'
 alias h='history'
 
+########################################
+if [ -d $HOME/man ]; then
+  export MANPATH=$HOME/man:
+fi
+
