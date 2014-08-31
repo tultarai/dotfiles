@@ -16,13 +16,6 @@ HISTFILE=~/.zsh_history
 HISTSIZE=100000
 SAVEHIST=100000
 
-# プロンプト
-# 1行表示
-# PROMPT="%~ %# "
-# 2行表示
-PROMPT="%{${fg[red]}%}[%n@%m]%{${reset_color}%} %~%# "
-RPROMPT="[%{$fg_no_bold[yellow]%}%?%{$reset_color%}]"
-
 # 単語の区切り文字を指定する
 autoload -Uz select-word-style
 select-word-style default
@@ -36,6 +29,20 @@ zstyle ':zle:*' word-style unspecified
 # 補完機能を有効にする
 autoload -Uz compinit
 compinit
+
+########################################
+source ~/.zsh/git-prompt
+
+########################################
+# プロンプト
+# PROMPT="%{${fg[red]}%}[%n@%m]%{${reset_color}%} %~%# "
+PROMPT="%{${fg[red]}%}[%n %~]%{${reset_color}%} %# "
+# RPROMPT="[%{$fg_no_bold[yellow]%}%?%{$reset_color%}]"
+precmd () {
+  RPROMPT='$(__git_ps1 "[%s]")'
+}
+GIT_PS1_SHOWDIRTYSTATE=1
+# GIT_PS1_SHOWCOLORHINTS=1
 
 ########################################
 # オプション
@@ -86,6 +93,9 @@ setopt equals
 
 # 補完候補にファイルの種類も表示
 setopt list_types
+
+# ロンプトに指定した文字列で変数展開を有効にする
+setopt prompt_subst
 
 ########################################
 # キーバインド
