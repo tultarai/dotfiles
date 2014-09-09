@@ -1,0 +1,63 @@
+use_xft yes
+xftfont VL Gothic  :size=8
+alignment top_right
+background no
+border_width 1
+cpu_avg_samples 2
+default_color white
+default_outline_color grey
+default_shade_color grey
+draw_borders no
+draw_graph_borders no
+draw_outline no
+draw_shades no
+gap_x 5
+gap_y 40
+minimum_size 5 5
+net_avg_samples 2
+#no_buffers yes
+double_buffer yes
+out_to_console no
+own_window yes
+own_window_class Conky
+own_window_type normal
+#own_window_type override
+own_window_transparent yes
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+stippled_borders no
+update_interval 1.0
+uppercase no
+use_spacer no
+show_graph_scale no
+show_graph_range no
+
+TEXT
+${font Arialblack:size=10}System Info$font
+$sysname
+$kernel
+$hr
+CPUクロック: ${freq_g}GHz
+CPU使用率: ${cpu}% 
+${cpubar 4}
+${cpugraph ff0000 00ff00}
+メモリ使用率: $memperc% 
+$mem/$memmax
+${membar 4}
+スワップ使用率: $swapperc% 
+${swapbar 4}
+$hr
+プロセス: $processes  
+ランニング: $running_processes
+$hr
+ディスク使用率: ${fs_used_perc}%
+${fs_used /} / ${fs_size /}
+${fs_bar 4}
+$hr
+ネットワーク:
+ Up:   ${upspeed eth0} k/s
+ ${upspeedgraph eth0 ff0000 00ff00}
+ Down: ${downspeed eth0} k/s
+ ${downspeedgraph eth0 00ff00 fff000}
+
+稼動時間: $uptime
+PC: $nodename
