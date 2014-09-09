@@ -72,7 +72,7 @@ set cursorline
 "-------------------------------------------------------------------------------
 set wildmenu " コマンド補完を強化
 " set wildchar=<tab> " コマンド補完を開始するキー
-set wildmode=list " リスト表示
+set wildmode=list,full " リスト表示
 set history=1000 " コマンド・検索パターンの履歴数
 " set complete+=k " 補完に辞書ファイル追加
 
