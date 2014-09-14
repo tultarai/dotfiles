@@ -29,6 +29,7 @@ NeoBundle 'kana/vim-textobj-user'
 NeoBundle 'kana/vim-textobj-entire'
 NeoBundle 'kana/vim-textobj-function'
 NeoBundle 'kana/vim-textobj-indent'
+NeoBundle 'nathanaelkane/vim-indent-guides'
 
 " colorscheme
 NeoBundle 'w0ng/vim-hybrid'
