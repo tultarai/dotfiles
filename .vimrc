@@ -1,5 +1,45 @@
-" from https://github.com/yuroyoro/dotfiles
+" 挙動を vi 互換ではなく、Vim のデフォルト設定にする
+set nocompatible
 
+" 一旦ファイルタイプ関連を無効化する
+filetype off
+
+"-------------------------------------------------------------------------------
+" NeoBundle
+"-------------------------------------------------------------------------------
+if has('vim_starting')
+  set nocompatible               " Be iMproved
+
+  " Required:
+  set runtimepath+=~/.vim/bundle/neobundle.vim/
+endif
+
+" Required:
+call neobundle#begin(expand('~/.vim/bundle/'))
+
+" Let NeoBundle manage NeoBundle
+" Required:
+NeoBundleFetch 'Shougo/neobundle.vim'
+
+" My Bundles here:
+" Refer to |:NeoBundle-examples|.
+" Note: You don't set neobundle setting in .gvimrc!
+NeoBundle 'tpope/vim-commentary'
+NeoBundle 'kana/vim-textobj-user'
+NeoBundle 'kana/vim-textobj-entire'
+NeoBundle 'kana/vim-textobj-function'
+NeoBundle 'kana/vim-textobj-indent'
+
+call neobundle#end()
+
+" Required:
+filetype plugin indent on
+
+" If there are uninstalled bundles found on startup,
+" this will conveniently prompt you to install them.
+NeoBundleCheck
+
+" from https://github.com/yuroyoro/dotfiles
 "-------------------------------------------------------------------------------
 " 基本設定 Basics
 "-------------------------------------------------------------------------------
@@ -112,44 +152,9 @@ set encoding=utf-8 " デフォルトエンコーディング
 "-------------------------------------------------------------------------------
 " matchit
 "-------------------------------------------------------------------------------
-set nocompatible
 filetype plugin on
 runtime macros/matchit.vim
 
-"-------------------------------------------------------------------------------
-" NeoBundle
-"-------------------------------------------------------------------------------
-" Note: Skip initialization for vim-tiny or vim-small.
-if !1 | finish | endif
+" filetypeの自動検出(最後の方に書いた方がいいらしい)
+filetype on
 
-if has('vim_starting')
-  set nocompatible               " Be iMproved
-
-  " Required:
-  set runtimepath+=~/.vim/bundle/neobundle.vim/
-endif
-
-" Required:
-call neobundle#begin(expand('~/.vim/bundle/'))
-
-" Let NeoBundle manage NeoBundle
-" Required:
-NeoBundleFetch 'Shougo/neobundle.vim'
-
-" My Bundles here:
-" Refer to |:NeoBundle-examples|.
-" Note: You don't set neobundle setting in .gvimrc!
-NeoBundle 'tpope/vim-commentary'
-NeoBundle 'kana/vim-textobj-user'
-NeoBundle 'kana/vim-textobj-entire'
-NeoBundle 'kana/vim-textobj-function'
-NeoBundle 'kana/vim-textobj-indent'
-
-call neobundle#end()
-
-" Required:
-filetype plugin indent on
-
-" If there are uninstalled bundles found on startup,
-" this will conveniently prompt you to install them.
-NeoBundleCheck
