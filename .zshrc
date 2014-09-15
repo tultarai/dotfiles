@@ -123,6 +123,7 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 alias h='history'
+alias ack='ack-grep'
 
 ########################################
 if [ -d $HOME/man ]; then
