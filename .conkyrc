@@ -58,6 +58,7 @@ $hr
  ${upspeedgraph eth0 ff0000 00ff00}
  Down: ${downspeed eth0} k/s
  ${downspeedgraph eth0 00ff00 fff000}
-
+$hr
 稼動時間: $uptime
 PC: $nodename
+WORKSPACE: ${desktop}
