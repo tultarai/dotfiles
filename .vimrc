@@ -25,6 +25,7 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 " Refer to |:NeoBundle-examples|.
 " Note: You don't set neobundle setting in .gvimrc!
 NeoBundle 'tpope/vim-commentary'
+NeoBundle 'tpope/vim-unimpaired'
 NeoBundle 'kana/vim-textobj-user'
 NeoBundle 'kana/vim-textobj-entire'
 NeoBundle 'kana/vim-textobj-function'
@@ -148,6 +149,11 @@ set softtabstop=2
 "-------------------------------------------------------------------------------
 set ffs=unix,dos,mac " 改行文字
 set encoding=utf-8 " デフォルトエンコーディング
+
+"-------------------------------------------------------------------------------
+" KeyMap
+"-------------------------------------------------------------------------------
+nnoremap <f5> :!ctags -R<CR>
 
 "-------------------------------------------------------------------------------
 " matchit
