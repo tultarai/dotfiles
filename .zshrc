@@ -32,7 +32,7 @@ compinit
 
 ########################################
 # プロンプト
-PROMPT="%{${fg[red]}%}[%n %~]%{${reset_color}%} %# "
+PROMPT="%{${fg[red]}%}[%n@%m %~]%{${reset_color}%} %# "
 
 autoload -Uz vcs_info
 zstyle ':vcs_info:*' formats '[%b]'
