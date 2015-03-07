@@ -125,6 +125,9 @@ alias l='ls -CF'
 alias h='history'
 alias ack='ack-grep'
 
+# git
+alias gl='git log --graph --date-order -C -M --pretty=format:"<%h> %ad [%cn] %Cgreen%d%Creset %s" --all --date=short'
+
 ########################################
 if [ -d $HOME/man ]; then
   export MANPATH=$HOME/man:
