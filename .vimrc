@@ -35,6 +35,7 @@ NeoBundle 'kana/vim-textobj-indent'
 NeoBundle 'nathanaelkane/vim-indent-guides'
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/neomru.vim'
+NeoBundle 'thinca/vim-ref'
 
 " colorscheme
 NeoBundle 'w0ng/vim-hybrid'
