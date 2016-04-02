@@ -5,4 +5,5 @@
 set columns=140
 " ウインドウの高さ
 set lines=65
-
+" 起動時のWindowの位置(:winposで現在の位置が取得できる)
+winpos 790 25
