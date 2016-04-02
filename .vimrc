@@ -39,6 +39,7 @@ NeoBundle 'Shougo/neocomplete'
 NeoBundle 'Shougo/neosnippet'
 NeoBundle 'Shougo/neosnippet-snippets'
 NeoBundle 'thinca/vim-ref'
+NeoBundle 'cocopon/colorswatch.vim'
 
 " colorscheme
 NeoBundle 'w0ng/vim-hybrid'
