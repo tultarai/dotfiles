@@ -288,10 +288,10 @@ endif
 "-------------------------------------------------------------------------------
 " color
 "-------------------------------------------------------------------------------
-set t_Co=256
-set t_Sf=[3%dm
-set t_Sb=[4%dm
-colorscheme hybrid
+" set t_Co=256
+" set t_Sf=[3%dm
+" set t_Sb=[4%dm
+" colorscheme hybrid
 
 " filetypeの自動検出(最後の方に書いた方がいいらしい)
 filetype on
