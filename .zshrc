@@ -129,6 +129,14 @@ alias ack='ack-grep'
 alias gl='git log --graph --date-order -C -M --pretty=format:"<%h> %ad [%cn] %Cgreen%d%Creset %s" --all --date=short'
 
 ########################################
+# terminal configuration
+case "${TERM}" in
+  xterm)
+    export TERM=xterm-256color
+    ;;
+esac
+
+########################################
 if [ -d $HOME/man ]; then
   export MANPATH=$HOME/man:
 fi
