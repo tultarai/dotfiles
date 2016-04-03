@@ -52,12 +52,22 @@ $hr
 ディスク使用率: ${fs_used_perc}%
 ${fs_used /} / ${fs_size /}
 ${fs_bar 4}
+${if_up eth0}
 $hr
-ネットワーク:
+ネットワーク: eth0
  Up:   ${upspeed eth0} k/s
  ${upspeedgraph eth0 ff0000 00ff00}
  Down: ${downspeed eth0} k/s
  ${downspeedgraph eth0 00ff00 fff000}
+${endif}
+${if_up enp0s3}
+$hr
+ネットワーク: enp0s3
+ Up:   ${upspeed enp0s3} k/s
+ ${upspeedgraph enp0s3 ff0000 00ff00}
+ Down: ${downspeed enp0s3} k/s
+ ${downspeedgraph enp0s3 00ff00 fff000}
+${endif}
 $hr
 稼動時間: $uptime
 PC: $nodename
