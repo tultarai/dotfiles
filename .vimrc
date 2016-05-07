@@ -293,6 +293,7 @@ endif
 " set t_Co=256
 " set t_Sf=[3%dm
 " set t_Sb=[4%dm
+syntax on
 set background=dark
 colorscheme hybrid
 
